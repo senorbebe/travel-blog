@@ -41,6 +41,8 @@
     z-index: 9999;
     color: black;
     cursor: pointer;
+    background: none;
+    border: none;
   }
 
   .open-nav {
