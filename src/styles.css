@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  font-size: clamp(1rem, 1vw, 2rem);
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h1 {
+  font-family: 'Indie Flower';
+}
+
+h2 {
+  font-family: 'Indie Flower';
+}

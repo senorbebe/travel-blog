@@ -1,0 +1,19 @@
+<button (click)="navToggele()" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" [attr.aria-expanded]="menuOpen">
+  <fa-icon *ngIf="!menuOpen" size="4x" [icon]="faBars"></fa-icon>
+  <fa-icon *ngIf="menuOpen" size="4x" [icon]="faClose"></fa-icon>
+  <span class="sr-only">Menü</span>
+</button>
+
+
+<div class="grid" [ngClass]="{'header-home': router.url === '/home', 'header-not-home': router.url !== '/home'}">
+  <nav>
+    <ul id="primary-navigation" [ngClass]="{'open-nav': menuOpen, 'list': true}" (click)="navToggele()">
+      <li class="logo-mobile-nav" *ngIf="menuOpen"><img src="../../assets/flags/co.png" alt="Logo Style Hub"/></li>
+      <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      <li><a routerLink="/places" routerLinkActive="active">Places</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+    </ul>
+  </nav>
+    <img class="logo" src="../../assets/flags/co.png" alt="Logo Style Hub" width="35px" height="25"/>
+  <div class="right"></div>
+</div>

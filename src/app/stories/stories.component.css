@@ -1,0 +1,13 @@
+h1 {
+  margin-left: 2rem;
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(475px, 1fr));
+  gap: 5rem 3rem;
+  justify-items: center;
+  margin-inline: 3rem;
+}
+
+

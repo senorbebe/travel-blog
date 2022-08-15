@@ -1,0 +1,6 @@
+<div class="section-stories">
+  <h1>Places</h1>
+  <div class="stories">
+    <app-countries *ngFor="let country of countriesWithFlags" [countryName]="country.name" [countryShort]="country.short"></app-countries>
+  </div>
+</div>

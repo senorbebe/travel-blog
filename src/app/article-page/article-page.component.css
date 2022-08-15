@@ -1,0 +1,28 @@
+.video {
+  position: static;
+}
+
+.article-meta-data {
+  font-family: 'Indie Flower';
+}
+
+.article-navigation {
+  border: 3px solid orange;
+  border-radius: .3em;
+  padding: 2rem 4rem;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.suggested-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
