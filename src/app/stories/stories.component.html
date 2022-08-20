@@ -1,6 +1,8 @@
 <div class="section-stories">
   <h1>Places</h1>
   <div class="stories">
-    <app-countries *ngFor="let country of countriesWithFlags" [countryName]="country.name" [countryShort]="country.short"></app-countries>
+    <a *ngFor="let country of articleService.articles" [routerLink]="['/articles', country.router]">
+    <app-countries [countryName]="country.country" [countryShort]="country.short"></app-countries>
+    </a>
   </div>
 </div>

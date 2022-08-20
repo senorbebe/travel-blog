@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './home/home.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
+import { ArticleService } from './service/article-service';
 
 @NgModule({
   declarations: [
@@ -19,14 +20,16 @@ import { ArticlePageComponent } from './article-page/article-page.component';
     StoriesComponent,
     HeaderComponent,
     HomeComponent,
-    ArticlePageComponent
+    ArticlePageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    ArticleService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

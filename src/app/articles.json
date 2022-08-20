@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Colombia",
+    "short": "co",
+    "country": "Colombia",
+    "continent": "South America",
+    "city": "",
+    "tags": [],
+    "router": "colombia",
+    "article": "<h1>Colombia</h1>\nThis is an article about Colombia.\n<h2>Best Places</h2>These are the best places there:",
+    "author": "Geetika",
+    "publishDate": "2022-08-20",
+    "category": "Country"
+  },
+  {
+    "name": "Costa Rica",
+    "short": "cr",
+    "country": "Costa Rica",
+    "continent": "Central America",
+    "city": "",
+    "tags": ["South America"],
+    "router": "costa-rica",
+    "article": "",
+    "author": "Geetika",
+    "publishDate": "2022-08-22",
+    "category": "Country"
+  }
+]

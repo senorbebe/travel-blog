@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArticleService } from '../service/article-service';
 
 
 
@@ -18,9 +19,16 @@ export class StoriesComponent implements OnInit {
 
   ];
 
-  constructor() { }
+
+  articleService: ArticleService;
+
+  constructor(private articleServiceDetails: ArticleService) {
+    this.articleService = articleServiceDetails
+  }
 
   ngOnInit(): void {
   }
+
+
 
 }

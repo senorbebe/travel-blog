@@ -1,36 +1,31 @@
 <app-video-hero class="video" [videoName]="'el-clavel'"></app-video-hero>
 <div class="article-meta-data">
-  Author: Geetika
-  Published: Aug 21 2022
+  <div>Author: {{getArticle().author}}</div>
+  <div>Published: {{getArticle().publishDate | date}}</div>
 </div>
 
 <div class="grid">
-  <div>
+  <!-- <div>
     <ul class="article-navigation">
-      <li>kjsa</li>
-      <li>kjsa</li>
-      <li>kjsa</li>
-      <li>kjsa</li>
-      <li>kjsa</li>
+      <li><a href="#colombia">Colombia</a></li>
+      <ul>
+        <li><a>kjsa</a></li>
+        <ul>
+          <li><a>kjsa</a></li>
+          <li><a>kjsa</a></li>
+          <li><a>kjsa</a></li>
+          <li><a>kjsa</a></li>
+      </ul>
+        <li><a>kjsa</a></li>
+        <li><a>kjsa</a></li>
+        <li><a>kjsa</a></li>
     </ul>
-  </div>
-<div class="article">
-  <h1>Colombia</h1>
+    </ul>
+  </div> -->
 
-  <p>
-    This is an article about Colombia. Colombia is amazing.
-    Let me tell you about it.
-  </p>
+  <div class="article" [routerLink]="['/articles']" innerHtml="{{getArticle().article}}"></div>
 
-  <h2>Volunteering</h2>
-  <p>Colombia offers plenty of great volunteering opportunities.</p>
-
-  <h2>Hostels</h2>
-  <p>Also, there are loads of cool hostels.</p>
-</div>
-
-<div class="suggested-content">
-  <app-countries *ngFor="let suggestion of suggestedContent" [countryName]="suggestion.name" [countryShort]="suggestion.short"></app-countries>
-</div>
-
+  <a *ngFor="let suggestion of getSuggestions()" [routerLink]="['/articles', suggestion.router]">
+    <app-countries [countryName]="suggestion.name" [countryShort]="suggestion.short"></app-countries>
+  </a>
 </div>

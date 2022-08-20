@@ -3,7 +3,13 @@
 }
 
 .article-meta-data {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   font-family: 'Indie Flower';
+  margin-left: 1rem;
+  margin-top: 1rem;
+  gap: .5rem;
 }
 
 .article-navigation {
@@ -12,13 +18,29 @@
   padding: 2rem 4rem;
   position: sticky;
   position: -webkit-sticky;
-  top: 10%;
+  top: 15%;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+
+li > :not(a.active) {
+  text-decoration: none;
+  color: black;
+}
+
+
+li > a.active {
+  color: black;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 2fr 1fr;
   justify-items: center;
+  margin-inline: 5rem;
 }
 
 .suggested-content {

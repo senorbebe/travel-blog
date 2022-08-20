@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Article, ArticleService } from '../service/article-service';
 
 @Component({
   selector: 'app-article-page',
@@ -7,18 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArticlePageComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  router: Router;
+  suggestions: Article[] = []
+
+
+  articleService: ArticleService
+
+  constructor(private articleServiceDetails: ArticleService, private angularRouter: Router) {
+    this.articleService = articleServiceDetails
+    this.router = angularRouter
   }
 
-  suggestedContent: {name: string, short: string}[] = [
-    {'name': 'Colombia', 'short': 'co'},
-    {'name': 'Costa Rica', 'short': 'cr'},
-    {'name': 'Spain', 'short': 'co'},
-    {'name': 'Morocco', 'short': 'cr'},
-    {'name': 'India', 'short': 'co'},
+  ngOnInit(): void {
+    this.getSuggestions()
+  }
 
-  ];
+  getSuggestions(): Article[] {
+    return this.articleService.getSuggestedContent(this.getArticle().name)
+  }
+
+  getArticle(): Article {
+    console.log(this.articleService.articles.find(article => '/articles/' + article.router === this.router.url))
+   return this.articleService.articles.find(article => '/articles/' + article.router === this.router.url)!
+  }
 
 }
