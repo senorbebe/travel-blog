@@ -1,13 +1,13 @@
 import { Injectable, OnInit } from '@angular/core';
 import ArticleJson from '../articles.json';
 
-enum Category {
-  Country,
-  Continent,
-  City,
-  Area,
-  Story,
-  Volunteering,
+export enum Category {
+  Country = 'Country',
+  Continent = 'Continent',
+  City = 'City',
+  Area = 'City',
+  Story = 'Story',
+  Volunteering = 'Volunteering',
 }
 
 export type Article = {
@@ -49,6 +49,10 @@ export class ArticleService implements OnInit {
     }
 
     return suggestions.length <= 5 ? suggestions : suggestions.slice(0, 5)
+  }
+
+  getArticlesByCategory(categories: Category[], limit: number): Article[] {
+    return this.articles.filter(article => categories.includes(article.category)).slice(0, limit)
   }
 
   ngOnInit(): void {

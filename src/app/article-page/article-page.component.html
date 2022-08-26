@@ -23,7 +23,7 @@
     </ul>
   </div> -->
 
-  <div class="article" [routerLink]="['/articles']" innerHtml="{{getArticle().article}}"></div>
+  <div class="article" innerHtml="{{getArticle().article}}"></div>
 
   <a *ngFor="let suggestion of getSuggestions()" [routerLink]="['/articles', suggestion.router]">
     <app-countries [countryName]="suggestion.name" [countryShort]="suggestion.short"></app-countries>
