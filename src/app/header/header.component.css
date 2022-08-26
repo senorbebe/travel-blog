@@ -86,4 +86,3 @@ li > :not(a.active) {
 li > a.active {
   color: black;
 }
-
