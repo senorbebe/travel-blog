@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleService } from '../service/article-service';
+import { Article, ArticleService, Category } from '../service/article-service';
 
 
 
@@ -10,25 +10,18 @@ import { ArticleService } from '../service/article-service';
 })
 export class StoriesComponent implements OnInit {
 
-  countriesWithFlags: {name: string, short: string}[] = [
-    {'name': 'Colombia', 'short': 'co'},
-    {'name': 'Costa Rica', 'short': 'cr'},
-    {'name': 'Spain', 'short': 'co'},
-    {'name': 'Morocco', 'short': 'cr'},
-    {'name': 'India', 'short': 'co'},
-
-  ];
-
-
-  articleService: ArticleService;
+  articleService: ArticleService
+  places: Article[] = []
+  volunteering: Article[] = []
 
   constructor(private articleServiceDetails: ArticleService) {
     this.articleService = articleServiceDetails
   }
 
   ngOnInit(): void {
+    this.places = this.articleService.getArticlesByCategory([Category.City, Category.Country, Category.Continent, Category.Area], 6)
+    this.volunteering = this.articleService.getArticlesByCategory([Category.Volunteering], 6)
   }
-
 
 
 }
