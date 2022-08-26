@@ -1,0 +1,47 @@
+.icon {
+  position: absolute;
+  left: .5rem;
+  top: .9rem;
+}
+
+.container {
+  position: relative;
+}
+
+.search-results {
+  background-color: white;
+  width: 90%;
+  height: 20%;
+  border-radius: .3em;
+  padding: 2rem 1rem;
+}
+
+.match {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.match__segment {
+  color: #555555;
+  display: inline-block;
+  white-space: pre;
+}
+
+.match__segment--on {
+  color: #000000 ;
+	font-weight: 800 ;
+}
+
+.result-photo {
+  position: relative;
+  height: 5rem;
+  width: 5rem;
+  border-radius: .3em;
+  background-size: 100% 100%;
+}
+
+.search-result-title {
+  margin-left: 2rem;
+}
