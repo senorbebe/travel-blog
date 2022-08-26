@@ -13,3 +13,7 @@ h1 {
 h2 {
   font-family: 'Indie Flower';
 }
+
+:root {
+  --primary-color: #26D07C;
+}
