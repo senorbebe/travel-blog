@@ -1,0 +1,17 @@
+ul {
+  list-style: none;
+  color: white;
+}
+
+.footer {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 1.5rem 0;
+  margin-top: 5rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
