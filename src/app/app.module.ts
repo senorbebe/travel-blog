@@ -11,6 +11,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './home/home.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { ArticleService } from './service/article-service';
+import { FooterComponent } from './footer/footer.component';
+import { InputComponent } from './input/input.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,11 +25,15 @@ import { ArticleService } from './service/article-service';
     HeaderComponent,
     HomeComponent,
     ArticlePageComponent,
+    FooterComponent,
+    InputComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [
     ArticleService,
