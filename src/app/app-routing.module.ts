@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 import { ArticlePageComponent } from './article-page/article-page.component';
 import { HomeComponent } from './home/home.component';
 import { ImprintComponent } from './imprint/imprint.component';
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'articles/:articleName', component: ArticlePageComponent},
   {path: 'imprint', component: ImprintComponent},
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
+  {path: 'about', component: AboutComponent},
   {path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 

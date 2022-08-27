@@ -20,6 +20,7 @@ import { PlacesComponent } from './places/places.component';
 import { VolunteeringComponent } from './volunteering/volunteering.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ImprintComponent } from './imprint/imprint.component';
     VolunteeringComponent,
     PrivacyPolicyComponent,
     ImprintComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
