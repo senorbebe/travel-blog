@@ -2,27 +2,32 @@
   <div class="container">
     <fa-icon class="icon" size="sm" [icon]="faSearch"></fa-icon>
     <!-- <app-input [(ngModel)]="form.search" (ngModelChange)="applyFilter()" [type]="'text'" [name]="'search'" [placeholder]="'Search...'"></app-input> -->
-    <input [(ngModel)]="form.search" (ngModelChange)="applyFilter()" type="text" name="search" placeholder="Search...">
+    <input (click)="resultsOpen=true" [(ngModel)]="form.search" (ngModelChange)="applyFilter()" type="text" name="search" placeholder="Search...">
   </div>
 
 
   <ul *ngIf="matches.length" class="search-results">
 
     <li *ngFor="let match of matches" class="match">
-      <div class="result-photo" [style.background-image]="'url(../../assets/fotos/' + match.value.id + '.jpg)'">
-      <!-- <img  src="../../assets/fotos/{{match.value.id}}.jpg" alt="Flag CountryName" width="150rem" height="100rem"> -->
-    </div>
-    <p></p>
-    <h2 class="search-result-title">
-      <span
-        *ngFor="let segment of match.segments"
-        class="match__segment match"
-        [class.match__segment--on]="segment.isMatch"
-        >{{ segment.value }}</span>
-      </h2>
+      <a class="result-element" [routerLink]="['/articles', match.value.router]">
+        <div class="result-photo" [style.background-image]="'url(../../assets/fotos/' + match.value.short + '.jpg)'">
+          <!-- <img  src="../../assets/fotos/{{match.value.id}}.jpg" alt="Flag CountryName" width="150rem" height="100rem"> -->
+        </div>
+        <div class="result-text">
+          <!-- <p class="description">--><div class="description">{{getAboveCategoryValue(match.value)}} | {{match.value.category}}</div>
+          <h2 class="search-result-title">
+            {{match.value.name}}
+            <!-- <span
+              *ngFor="let segment of match.segments"
+              class="match__segment match"
+              [class.match__segment--on]="segment.isMatch">
+              {{ segment.value }}
+            </span> -->
+          </h2>
+        </div>
+      </a>
     </li>
   </ul>
-
 
   <!-- <div class="search-results">
     <a>

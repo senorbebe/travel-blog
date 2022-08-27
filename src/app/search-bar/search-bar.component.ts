@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Article, ArticleService } from '../service/article-service';
+import { Article, ArticleService, Category } from '../service/article-service';
 import { FuzzySegment, SearchService } from '../service/search.service';
 
 
 interface FilterMatch {
 	score: number;
-	value: ArticleSearchType;
+	value: Article;
 	segments: FuzzySegment[];
 }
 
@@ -22,9 +23,6 @@ interface ArticleSearchType {
 })
 export class SearchBarComponent implements OnInit {
 
-
-
-
   public form: {
     search: string;
   }
@@ -35,6 +33,7 @@ export class SearchBarComponent implements OnInit {
   articleService: ArticleService
 
   faSearch = faMagnifyingGlass
+  resultsOpen: boolean = false
 
   constructor(private searchServiceImport: SearchService, private articleServiceImport: ArticleService) {
     this.searchService = searchServiceImport;
@@ -60,13 +59,14 @@ export class SearchBarComponent implements OnInit {
 
 		}
 
-    var articleSearchTypes: ArticleSearchType[] = []
+    //var articleSearchTypes: ArticleSearchType[] = []
 
-    this.articleService.articles.forEach(article => articleSearchTypes.push({id: article.short, name: article.name}))
+    //this.articleService.articles.forEach(article => articleSearchTypes.push({id: article.short, name: article.name}))
 
 
 
-		this.matches = articleSearchTypes
+
+		this.matches = this.articleService.articles
 
 			.map(
 				( article ) => {
@@ -111,6 +111,26 @@ export class SearchBarComponent implements OnInit {
 
 	}
 
+  getAboveCategoryValue(article: Article): string {
+    switch (article.category) {
+      case Category.City:
+        return article.country
+      case Category.Country:
+        return article.continent
+      case Category.Area:
+        return article.country
+      case Category.Volunteering:
+        return article.country
+      default:
+        return ''
+    }
+  }
 
+  @HostListener("document:click")
+  clickedOut() {
+    this.form.search = ''
+    this.matches = []
+
+  }
 
 }

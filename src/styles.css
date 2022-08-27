@@ -17,3 +17,14 @@ h2 {
 :root {
   --primary-color: #26D07C;
 }
+
+input {
+  background: none;
+  border: 3px solid black;
+  border-radius: .3em;
+  padding: .75rem 2rem;
+  width: 75%;
+  justify-self: center;
+  color: black;
+  font-size: 1.25rem;
+}
