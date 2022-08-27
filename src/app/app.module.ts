@@ -15,6 +15,11 @@ import { FooterComponent } from './footer/footer.component';
 import { InputComponent } from './input/input.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
+import { OverviewComponent } from './overview/overview.component';
+import { PlacesComponent } from './places/places.component';
+import { VolunteeringComponent } from './volunteering/volunteering.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,11 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     InputComponent,
     SearchBarComponent,
+    OverviewComponent,
+    PlacesComponent,
+    VolunteeringComponent,
+    PrivacyPolicyComponent,
+    ImprintComponent,
   ],
   imports: [
     BrowserModule,
