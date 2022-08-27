@@ -52,7 +52,9 @@ export class ArticleService implements OnInit {
   }
 
   getArticlesByCategory(categories: Category[], limit: number): Article[] {
-    return this.articles.filter(article => categories.includes(article.category)).slice(0, limit)
+    var categoryArticles = this.articles.filter(article => categories.includes(article.category))
+    limit > 0 ? categoryArticles = categoryArticles.slice(0, limit) : categoryArticles
+    return categoryArticles
   }
 
   ngOnInit(): void {
