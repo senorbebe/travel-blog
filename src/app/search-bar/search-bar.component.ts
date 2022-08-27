@@ -92,7 +92,7 @@ export class SearchBarComponent implements OnInit {
 			)
 			// For the sake of the demo, we only want to show the top-scoring matches.
 			// Slice off the top of the scored values.
-			.slice( 0, 20 )
+			.slice( 0, 10 )
 			// At this point, we've narrowed down the set of values to the ones we want
 			// to show to the user. Now, we can go back and create a data-structure that
 			// can be more easily rendered (but takes more processing).
