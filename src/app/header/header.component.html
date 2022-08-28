@@ -1,11 +1,20 @@
+<div [ngClass]="{'search-overlay': searchOpen}" class="search-overlay"></div>
+
+<div class="header">
+<button (click)="searchToggle()" id="mobile-search-icon" class="mobile-search-icon" aria-controls="primary-search" [attr.aria-expanded]="searchOpen">
+  <fa-icon *ngIf="!searchOpen" size="4x" [icon]="fasearch"></fa-icon>
+  <fa-icon *ngIf="searchOpen" size="4x" [icon]="faClose"></fa-icon>
+  <span class="sr-only">Search</span>
+</button>
+
 <button (click)="navToggele()" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" [attr.aria-expanded]="menuOpen">
   <fa-icon *ngIf="!menuOpen" size="4x" [icon]="faBars"></fa-icon>
   <fa-icon *ngIf="menuOpen" size="4x" [icon]="faClose"></fa-icon>
-  <span class="sr-only">Menü</span>
+  <span class="sr-only">Menu</span>
 </button>
 
 
-<div class="grid" [ngClass]="{'header-home': router.url === '/home', 'header-not-home': router.url !== '/home'}">
+<div class="grid">
   <nav>
     <ul id="primary-navigation" [ngClass]="{'open-nav': menuOpen, 'list': true}" (click)="navToggele()">
       <li class="logo-mobile-nav" *ngIf="menuOpen"><img src="../../assets/flags/co.png" alt="Logo Style Hub"/></li>
@@ -16,6 +25,7 @@
     </ul>
   </nav>
     <!-- <img class="logo" src="../../assets/flags/co.png" alt="Logo Style Hub" width="35px" height="25"/> -->
-    <h1 class="name">Take The Plunge</h1>
-  <app-search-bar class="right"></app-search-bar>
+    <h1 *ngIf="!searchOpen" class="name">Take The Plunge</h1>
+  <app-search-bar [ngClass]="{'search-open': searchOpen, 'search-closed': !searchOpen, 'right': true}"></app-search-bar>
+</div>
 </div>

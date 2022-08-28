@@ -130,7 +130,6 @@ export class SearchBarComponent implements OnInit {
   clickedOut() {
     this.form.search = ''
     this.matches = []
-
   }
 
 }

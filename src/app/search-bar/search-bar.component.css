@@ -78,3 +78,9 @@
 a {
   text-decoration: none;
 }
+
+@media (max-width: 950px) {
+  .search-results {
+    width: 80%
+  }
+}

@@ -8,6 +8,7 @@
   width: 100%;
   font-size: 1.5rem;
   font-family: 'Indie Flower';
+  z-index: 9999;
 }
 
 .mobile-nav-toggle {
@@ -17,6 +18,12 @@
 .logo-mobile-nav {
   display: none;
 }
+
+.mobile-search-icon {
+  display: none;
+}
+
+
 
 
 @media (max-width: 950px) {
@@ -32,13 +39,42 @@
     transform: translateX(100%);
   }
 
+  .header {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .search-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1rem);
+    z-index: 1000;
+}
+
   .mobile-nav-toggle {
     display: block;
     position: absolute;
     right: 2rem;
     top: 2rem;
     align-self: center;
-    z-index: 9999;
+    z-index: 999;
+    color: black;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .mobile-search-icon {
+    display: block;
+    position: absolute;
+    left: 1rem;
+    top: 2rem;
+    align-self: center;
+    z-index: 99999;
     color: black;
     cursor: pointer;
     background: none;
@@ -51,6 +87,26 @@
 
   .logo-mobile-nav {
     display: block;
+  }
+
+  .search-closed {
+    display: none;
+  }
+
+  .search-open {
+    display: block;
+    position: absolute;
+    width: 80%;
+    top: 2rem;
+    justify-self: center;
+    left: 15%;
+    z-index: 9999;
+  }
+
+  .name {
+    position: absolute;
+    top: 2rem;
+    margin: 0;
   }
 
   @supports (backdrop-filter: blur(3rem)) {
@@ -89,4 +145,6 @@ li > a.active {
 
 .name {
   place-self: center;
+  font-size: clamp(1.5rem, 2vw, 4rem)
 }
+
