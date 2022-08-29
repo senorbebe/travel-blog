@@ -10,7 +10,7 @@
 
     <li *ngFor="let match of matches" class="match">
       <a class="result-element" [routerLink]="['/articles', match.value.router]">
-        <div class="result-photo" [style.background-image]="'url(../../assets/fotos/' + match.value.short + '.jpg)'">
+        <div class="result-photo" [style.background-image]="'url(./assets/fotos/' + match.value.short + '.jpg)'">
           <!-- <img  src="../../assets/fotos/{{match.value.id}}.jpg" alt="Flag CountryName" width="150rem" height="100rem"> -->
         </div>
         <div class="result-text">
