@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, EventEmitter, HostListener, OnInit, Output } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Article, ArticleService, Category } from '../service/article-service';
@@ -130,6 +130,12 @@ export class SearchBarComponent implements OnInit {
   clickedOut() {
     this.form.search = ''
     this.matches = []
+  }
+
+  @Output() searchClosedEvent = new EventEmitter<string>();
+
+  searchClosed() {
+    this.searchClosedEvent.emit();
   }
 
 }
