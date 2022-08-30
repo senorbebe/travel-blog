@@ -57,6 +57,7 @@
 }
 
 .search-result-title {
+  font-size: clamp(1.5rem, 2vw, 4rem);
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -73,6 +74,7 @@
   flex-direction: column;
   margin-left: 2rem;
   color: black;
+  justify-content: center;
 }
 
 a {
@@ -81,6 +83,10 @@ a {
 
 @media (max-width: 950px) {
   .search-results {
-    width: 80%
+    width: 87%
+  }
+
+  .result-element {
+    width: 89%;
   }
 }
