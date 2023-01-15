@@ -28,3 +28,14 @@ input {
   color: black;
   font-size: 1.25rem;
 }
+
+
+@font-face {
+  font-family: "Roboto Slab";
+  src: url("assets/fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Indie Flower";
+  src: url("assets/fonts/IndieFlower-Regular.ttf");
+}

@@ -52,7 +52,7 @@
     width: 100%;
     height: 100%;
     backdrop-filter: blur(1rem);
-    z-index: 10001;
+    z-index: 10004;
 }
 
   .mobile-nav-toggle {
@@ -61,7 +61,7 @@
     right: 2rem;
     top: 2rem;
     align-self: center;
-    z-index: 10000;
+    z-index: 10003;
     color: black;
     cursor: pointer;
     background: none;
