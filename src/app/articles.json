@@ -6,11 +6,12 @@
     "continent": "South America",
     "city": "",
     "tags": [],
-    "router": "colombia",
+    "router": "",
     "article": "<h1>Colombia</h1>\nThis is an article about Colombia.\n<h2>Best Places</h2>These are the best places there:",
     "author": "Geetika",
     "publishDate": "2022-08-20",
-    "category": "Country"
+    "category": "Country",
+    "fotoFileName": "co-guide"
   },
   {
     "name": "Costa Rica",
@@ -19,10 +20,25 @@
     "continent": "Central America",
     "city": "",
     "tags": ["South America"],
-    "router": "costa-rica",
+    "router": "",
     "article": "",
     "author": "Geetika",
     "publishDate": "2022-08-22",
-    "category": "Country"
+    "category": "Country",
+    "fotoFileName": "cr-guide"
+  },
+  {
+    "name": "Teaching English in Colombia",
+    "short": "co",
+    "country": "Colombia",
+    "continent": "South America",
+    "city": "Acacias",
+    "tags": ["South America", "Volunteering"],
+    "router": "new-western",
+    "article": "",
+    "author": "Jonas",
+    "publishDate": "2023-01-15",
+    "category": "Volunteering",
+    "fotoFileName": "co-volunteering"
   }
 ]

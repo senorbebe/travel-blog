@@ -138,4 +138,9 @@ export class SearchBarComponent implements OnInit {
     this.searchClosedEvent.emit();
   }
 
+  formatRouting(route: string): string {
+    console.log(route.toLowerCase().replace(/\s/g, "-"))
+    return route.toLowerCase().replace(/\s/g, "-")
+  }
+
 }

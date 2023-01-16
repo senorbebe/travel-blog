@@ -26,12 +26,18 @@ export class ArticlePageComponent implements OnInit {
   }
 
   getSuggestions(): Article[] {
+    console.log('suggestions: ', this.articleService.getSuggestedContent(this.getArticle().name))
     return this.articleService.getSuggestedContent(this.getArticle().name)
   }
 
   getArticle(): Article {
-    console.log(this.articleService.articles.find(article => '/articles/' + article.router === this.router.url))
-   return this.articleService.articles.find(article => '/articles/' + article.router === this.router.url)!
+    console.log(this.articleService.articles.find(article => '/articles/' + this.formatRouting(article.country) + '/' + article.router === this.router.url))
+   return this.articleService.articles.find(article => '/articles/' + this.formatRouting(article.country) + '/' + article.router === this.router.url)!
+  }
+
+  formatRouting(route: string): string {
+    console.log(route.toLowerCase().replace(/\s/g, "-"))
+    return route.toLowerCase().replace(/\s/g, "-")
   }
 
 }

@@ -22,6 +22,7 @@ export type Article = {
   author: string;
   publishDate: Date;
   category: Category;
+  fotoFileName: string;
 }
 
 @Injectable({

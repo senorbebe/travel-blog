@@ -12,7 +12,7 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'places', component: PlacesComponent},
   {path: 'volunteering', component: VolunteeringComponent},
-  {path: 'articles/:articleName', component: ArticlePageComponent},
+  {path: 'articles/:countryName/:articleName', component: ArticlePageComponent},
   {path: 'imprint', component: ImprintComponent},
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
   {path: 'about', component: AboutComponent},

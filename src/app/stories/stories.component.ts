@@ -23,5 +23,8 @@ export class StoriesComponent implements OnInit {
     this.volunteering = this.articleService.getArticlesByCategory([Category.Volunteering], 6)
   }
 
-
+  formatRouting(route: string): string {
+    console.log(route.toLowerCase().replace(/\s/g, "-"))
+    return route.toLowerCase().replace(/\s/g, "-")
+  }
 }

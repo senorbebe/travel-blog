@@ -1,15 +1,15 @@
 <div class="section-stories">
   <h1>Places</h1>
   <div class="stories">
-    <a *ngFor="let country of places" [routerLink]="['/articles', country.router]">
-    <app-countries [countryName]="country.country" [countryShort]="country.short"></app-countries>
+    <a *ngFor="let country of places" [routerLink]="['/articles', formatRouting(country.country), country.router]">
+    <app-countries [countryName]="country.country" [countryShort]="country.short" [fotoFileName]="country.fotoFileName"></app-countries>
     </a>
   </div>
 
   <h1>Volunteering</h1>
   <div class="stories">
-    <a *ngFor="let country of volunteering" [routerLink]="['/articles', country.router]">
-    <app-countries [countryName]="country.name" [countryShort]="country.short"></app-countries>
+    <a *ngFor="let country of volunteering" [routerLink]="['/articles', formatRouting(country.country), country.router]">
+    <app-countries [countryName]="country.name" [countryShort]="country.short" [fotoFileName]="country.fotoFileName"></app-countries>
     </a>
   </div>
 </div>

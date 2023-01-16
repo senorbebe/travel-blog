@@ -25,7 +25,7 @@
 
   <div class="article" innerHtml="{{getArticle().article}}"></div>
 
-  <a *ngFor="let suggestion of getSuggestions()" [routerLink]="['/articles', suggestion.router]">
-    <app-countries [countryName]="suggestion.name" [countryShort]="suggestion.short"></app-countries>
+  <a class="suggestion" *ngFor="let suggestion of getSuggestions()" [routerLink]="['/articles', formatRouting(suggestion.country), suggestion.router]">
+    <app-countries [countryName]="suggestion.name" [countryShort]="suggestion.short" [fotoFileName]="suggestion.fotoFileName"></app-countries>
   </a>
 </div>

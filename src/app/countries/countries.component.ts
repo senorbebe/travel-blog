@@ -15,5 +15,6 @@ export class CountriesComponent implements OnInit {
 
   @Input() countryName: string = ""
   @Input() countryShort: string = ""
+  @Input() fotoFileName: string = ""
 
 }

@@ -18,4 +18,7 @@ export class OverviewComponent implements OnInit {
   @Input() articles: Article[] = []
   @Input() title: string = 'Places'
 
+  formatRouting(route: string): string {
+    return route.toLowerCase().replace(/\s/g, "-")
+  }
 }

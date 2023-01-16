@@ -41,12 +41,17 @@ li > a.active {
   grid-template-columns: 2fr 1fr;
   justify-items: center;
   margin-inline: 5rem;
+  gap: 5rem;
 }
 
 .suggested-content {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+.suggestion {
+  grid-column: 2;
 }
 
 @media (max-width: 950px) {

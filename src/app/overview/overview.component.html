@@ -1,7 +1,7 @@
 <app-video-hero [videoName]="'el-clavel'"></app-video-hero>
 <h1 class="title">{{title}}</h1>
 <div class="places">
-  <a *ngFor="let place of articles" [routerLink]="['/articles', place.router]">
-  <app-countries [countryName]="place.name" [countryShort]="place.short"></app-countries>
+  <a *ngFor="let place of articles" [routerLink]="['/articles' + formatRouting(place.country), place.router]">
+  <app-countries [countryName]="place.name" [countryShort]="place.short" [fotoFileName]="place.fotoFileName"></app-countries>
   </a>
 </div>
